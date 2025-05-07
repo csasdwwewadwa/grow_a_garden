@@ -1,0 +1,50 @@
+tomato 0.5
+strawberry 0.3
+blueberry 0.2
+orange_tulip 0.05
+tomato 0.5
+corn 2
+daffodil 0.22
+strawberry 0.35
+blueberry 0.25
+bamboo 4
+carrot 0.2 wet
+tomato 0.55
+corn 3
+watermelon 7
+pumpkin 8
+apple 3
+bamboo 4.2
+carrot 0.25 wet
+strawberry 0.32 wet
+daffodil 0.22 wet
+tomato 0.6
+corn 3.5
+watermelon 7.5
+pumpkin 8.5
+blueberry 0.22 wet
+orange_tulip 0.06 wet
+tomato 0.55 chilled
+corn 2.2 chilled
+apple 3.2 wet
+eggplant 5
+dragon_fruit 12
+carrot 0.27 chilled
+blueberry 0.2 chilled
+watermelon 7.2 wet
+pumpkin 8.2 wet
+bamboo 4.5 wet
+coconut 14.5 wet
+cactus 7.2 shocked
+dragon_fruit 12.2 chilled
+mango 15.2 wet
+eggplant 5.5 shocked
+bamboo 4.7 shocked
+tomato 0.6 frozen
+corn 2.5 wet
+apple 3.5 wet
+bamboo 5 frozen
+dragon_fruit 13 chilled
+mango 16 frozen
+grape 3.3 shocked
+coconut 15 wet
