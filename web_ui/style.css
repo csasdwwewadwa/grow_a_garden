@@ -1,0 +1,50 @@
+/* web/style.css */
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1, h2 {
+    color: #0056b3;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004085;
+}
+
+.output {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    white-space: pre-wrap; /* Handle line breaks if any */
+}
+
+#statusOutput {
+    font-weight: bold;
+    color: green; /* Default status color */
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}

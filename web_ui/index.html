@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eel Python UI</title>
+
+    <!-- Link to your separate CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <h1>Welcome to your Eel App!</h1>
+
+    <p>Click the button to call a Python function:</p>
+
+    <!-- Interactive Button -->
+    <button id="callPythonButton">Call Python Hello</button>
+
+    <hr>
+
+    <p>Click this button to start a Python task and see status updates:</p>
+     <button id="startTaskButton">Start Python Task (3s)</button>
+     <p>Status: <span id="statusOutput">Waiting...</span></p>
+
+
+    <hr>
+
+    <!-- An area to display output from Python -->
+    <h2>Python Output:</h2>
+    <div id="outputArea" class="output">
+        <!-- Output will appear here -->
+        No output yet.
+    </div>
+
+    <!-- IMPORTANT: Link Eel's auto-generated JS library -->
+    <!-- Eel serves this file automatically from its internal server -->
+    <script type="text/javascript" src="/eel.js"></script>
+
+    <!-- Link to your separate JavaScript file -->
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
