@@ -3,43 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eel Python UI</title>
-
-    <!-- Link to your separate CSS file -->
+    <title>csamacro</title>
+    <link rel="stylesheet" href="assets/fonts/Inter-4.1/web/inter.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
+    <div class="app-container">
+        <!-- Custom Top Bar (Eel will handle window drag if configured) -->
+        <div class="top-bar">
+            <div class="window-controls">
+                <button class="control-button minimize">
+                    <img src="assets/top-bar/Minimize button.svg" alt="[-]">
+                </button>
+                <button class="control-button close">
+                    <img src="assets/top-bar/Exit button.svg" alt="[x]">
+                </button>
+            </div>
+        </div>
 
-    <h1>Welcome to your Eel App!</h1>
+        <!-- Tabs -->
+        <div class="tab-bar">
+            <button class="tab-item active">Buying</button>
+            <div class="tab-separator"></div>
+            <button class="tab-item">Alts</button>
+            <div class="tab-separator"></div>
+            <button class="tab-item">Configs</button>
+            <div class="tab-separator"></div>
+        </div>
 
-    <p>Click the button to call a Python function:</p>
+        <!-- Main Content Area -->
+        <div class="content-area">
+            <!-- Plants Section -->
+            <div class="list-section">
+                <h3>Plants to buy</h3>
+                <ul class="item-list">
+                    <li class="selected">Mushroom</li>
+                    <li>Pepper</li>
+                    <li>Grape</li>
+                    <li>Dragon Fruit</li>
+                    <!-- Add more items to make it scrollable -->
+                     <li>Another Plant 1</li>
+                     <li>Another Plant 2</li>
+                     <li>Another Plant 3</li>
+                     <li>Another Plant 4</li>
+                     <li>Another Plant 5</li>
+                     <li>Another Plant 6</li>
+                </ul>
+            </div>
 
-    <!-- Interactive Button -->
-    <button id="callPythonButton">Call Python Hello</button>
+            <!-- Gears Section -->
+            <div class="list-section">
+                <h3>Gears to buy</h3>
+                <ul class="item-list">
+                    <li>Master Sp.</li>
+                    <li class="selected">Lightning Rod</li>
+                    <li>Godly Sp.</li>
+                    <li>Advanced Sp.</li>
+                     <!-- Add more items to make it scrollable -->
+                     <li>Another Gear 1</li>
+                     <li>Another Gear 2</li>
+                     <li>Another Gear 3</li>
+                     <li>Another Gear 4</li>
+                     <li>Another Gear 5</li>
+                     <li>Another Gear 6</li>
+                </ul>
+            </div>
 
-    <hr>
+            <!-- Eggs Section -->
+            <div class="list-section">
+                 <h3>Eggs to buy</h3>
+                <ul class="item-list">
+                    <li class="selected">Bug Egg</li>
+                    <li>Legendary Egg</li>
+                    <!-- Add more items if needed -->
+                </ul>
+            </div>
+        </div>
 
-    <p>Click this button to start a Python task and see status updates:</p>
-     <button id="startTaskButton">Start Python Task (3s)</button>
-     <p>Status: <span id="statusOutput">Waiting...</span></p>
-
-
-    <hr>
-
-    <!-- An area to display output from Python -->
-    <h2>Python Output:</h2>
-    <div id="outputArea" class="output">
-        <!-- Output will appear here -->
-        No output yet.
+        <!-- Bottom Button Bar -->
+        <div class="button-bar">
+            <button>Start (F1)</button>
+            <button>Stop (F2)</button>
+        </div>
     </div>
 
-    <!-- IMPORTANT: Link Eel's auto-generated JS library -->
-    <!-- Eel serves this file automatically from its internal server -->
-    <script type="text/javascript" src="/eel.js"></script>
-
-    <!-- Link to your separate JavaScript file -->
-    <script type="text/javascript" src="script.js"></script>
-
+    <!-- JavaScript for interactivity (will need Eel integration) -->
+    <script src="script.js"></script>
 </body>
 </html>

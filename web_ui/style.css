@@ -1,50 +1,244 @@
-/* web/style.css */
+:root {
+    --bg-color: #2C313C;
+    --bg-color-light: #343B48;
+
+    --dark-yellow: #BEB495;
+    --yellow: #FFE89E;
+    --gray: #9CA5B7;
+    --white: #FFFFFF;
+
+}
 
 body {
-    font-family: sans-serif;
-    margin: 20px;
-    background-color: #f0f0f0;
-    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    display: flex; /* Center the window */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure it takes full viewport height */
+    overflow: hidden;
+
+    font-family: 'Inter', 'Times New Roman';
 }
 
-h1, h2 {
-    color: #0056b3;
+.app-container {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    width: 605px;
+    height: 446px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-button {
-    padding: 10px 15px;
-    margin: 5px;
-    background-color: #007bff;
-    color: white;
+/* Custom Top Bar Styling */
+.top-bar {
+    -webkit-app-region: drag; /* Allows dragging the window using this bar */
+    height: 32px;
+    background-color: var(--bg-color-light);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* Make elements inside not draggable unless specified */
+    * { -webkit-app-region: no-drag; }
+}
+
+.window-controls {
+    display: flex;
+}
+
+.window-controls button {
+    background: none;
+    background-color: none;
     border: none;
-    border-radius: 5px;
+    color: var(--text-color-light);
+    font-size: 16px;
+    width: 60px;
+    height: 30px;
     cursor: pointer;
-    font-size: 1em;
+    outline: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+.window-controls button:hover img {
+    filter: brightness(0) invert(1);
 }
 
-button:active {
-    background-color: #004085;
+.window-controls button.minimize:hover {
+    background-color: #3e4757;
+}
+.window-controls button.minimize:active {
+    background-color: #4e5b72;
 }
 
-.output {
-    margin-top: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    white-space: pre-wrap; /* Handle line breaks if any */
+.window-controls button.close:hover {
+    background-color: #d43845;
+}
+.window-controls button.close:active {
+    background-color: #852830;
 }
 
-#statusOutput {
-    font-weight: bold;
-    color: green; /* Default status color */
+
+/* Tab Bar Styling */
+.tab-bar {
+    display: flex;
+    background-color: none;
+    padding: 0px, 0px, 20px;
+    align-items: center;
+    height: 33px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-hr {
-    margin: 20px 0;
-    border: 0;
-    border-top: 1px solid #ddd;
+.tab-item {
+    background: none;
+    background-color: none;
+    border: none;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    white-space: nowrap;
+    width: fit-content;
+    cursor: pointer;
+    color: var(--gray);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    transition: color 0.2s ease;
+
+    font-family: inherit;
+    transition: 0.2s ease;
+}
+
+.tab-item:first-child {
+     margin-left: 0; /* Remove left margin for the first tab item */
+}
+.tab-item:last-child {
+     margin-right: 0; /* Remove right margin for the last tab item */
+}
+
+.tab-item:hover {
+    filter: brightness(70%) contrast(150%);
+}
+.tab-item.active {
+    color: var(--white);
+}
+
+.tab-separator {
+    width: 2px;
+    border-radius: 1px;
+    height: 15px;
+    background-color: var(--bg-color-light);
+}
+
+
+/* Main Content Area Styling */
+.content-area {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 20px;
+    overflow: hidden; /* Prevent content area itself from scrolling, let lists handle it */
+}
+
+.list-section {
+    max-width: 200px;
+    /* background-color: var(--bg-color-medium); */
+    background-color: #852830;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-section h3 {
+    color: var(--text-color-light);
+    margin: 0 0 10px 0; /* Space below heading */
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border-color); /* Separator below heading */
+}
+
+.item-list {
+    list-style: none; /* Remove default list bullets */
+    padding: 0;
+    margin: 0;
+    flex: 1; /* Allow the list to grow and take available space */
+    overflow-y: auto; /* Enable vertical scrolling */
+    /* Style the scrollbar (optional, customize appearance) */
+    scrollbar-width: thin;
+    scrollbar-color: var(--bg-color-light) var(--bg-color-medium);
+}
+
+.item-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.item-list::-webkit-scrollbar-track {
+    background: var(--bg-color-medium);
+}
+
+.item-list::-webkit-scrollbar-thumb {
+    background-color: var(--bg-color-light);
+    border-radius: 4px;
+    border: 2px solid var(--bg-color-medium); /* Creates space around the thumb */
+}
+
+
+.item-list li {
+    color: var(--text-color-light);
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 3px; /* Subtle rounded corners for items */
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.item-list li:hover {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+}
+
+.item-list li.selected {
+    background-color: var(--bg-color-light); /* Selected background */
+    color: var(--text-color-selected); /* Selected text color */
+    font-weight: bold; /* Make selected item bold */
+}
+
+
+/* Bottom Button Bar Styling */
+.button-bar {
+    padding: 15px 20px;
+    background-color: var(--bg-color-dark); /* Match window background */
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 20px; /* Space between buttons */
+}
+
+.button-bar button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color-medium);
+    color: var(--text-color-light);
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.button-bar button:hover {
+    background-color: var(--bg-color-light);
+    border-color: var(--text-color-selected);
+}
+
+.button-bar button:active {
+    background-color: var(--bg-color-light);
+    /* Add a subtle press effect */
+    transform: translateY(1px);
 }
