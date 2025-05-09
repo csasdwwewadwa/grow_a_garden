@@ -147,6 +147,7 @@ def rotate_camera(x, y):
     csamacro.mouse_move_relative(0, -5)
     csamacro.mouse_button_down('right')
     csamacro.mouse_button_up('right')
+    csamacro.mouse_move_relative(0, 5)
     csamacro.mouse_button_down('right')
     csamacro.mouse_move_relative(round(x/CAMERA_SENSITIVITY*2), round(-y/CAMERA_SENSITIVITY*2), debounce=0.1)
     csamacro.mouse_button_up('right')
