@@ -9,6 +9,33 @@
 
 }
 
+.custom-scroll {
+    overflow: auto;
+    scrollbar-gutter: stable overlay;
+}
+
+.custom-scroll::-webkit-scrollbar {
+    width: 18px;
+    height: 18px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-button {
+    background: transparent;
+    display: none;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--gray);
+    border-radius: 9px;
+    border: 7px solid transparent;
+    background-clip: padding-box;
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -32,7 +59,7 @@ body {
     flex-direction: column;
 }
 
-/* Custom Top Bar Styling */
+/* Custom Top Bar Styling ---------------------------------------------------------------------- */
 .top-bar {
     -webkit-app-region: drag; /* Allows dragging the window using this bar */
     height: 32px;
@@ -108,12 +135,11 @@ body {
     cursor: pointer;
     color: var(--gray);
     font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    transition: color 0.2s ease;
+    font-weight: 500;
+    letter-spacing: 0.1em;
 
     font-family: inherit;
-    transition: 0.2s ease;
+    transition: 0.1s ease;
 }
 
 .tab-item:first-child {
@@ -124,7 +150,7 @@ body {
 }
 
 .tab-item:hover {
-    filter: brightness(70%) contrast(150%);
+    filter: brightness(80%) contrast(150%);
 }
 .tab-item.active {
     color: var(--white);
@@ -138,107 +164,114 @@ body {
 }
 
 
-/* Main Content Area Styling */
+/* Main Content Area Styling ---------------------------------------------------------------------- */
+
 .content-area {
     display: flex;
     flex: 1;
     justify-content: flex-start;
-    padding: 20px;
+    padding-top: 19px;
+    padding-left: 26px;
     gap: 20px;
     overflow: hidden; /* Prevent content area itself from scrolling, let lists handle it */
 }
 
+/* Hide inactive tabs */
+.tab-content {
+    display: none;
+    justify-content: flex-start;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.tab-content.active-tab {
+    display: flex;
+}
+
 .list-section {
-    max-width: 200px;
+    width: 135px;
+    padding: 0px;
+    margin: 0px;
     /* background-color: var(--bg-color-medium); */
-    background-color: #852830;
-    padding: 15px;
     display: flex;
     flex-direction: column;
 }
 
 .list-section h3 {
-    color: var(--text-color-light);
-    margin: 0 0 10px 0; /* Space below heading */
+    color: var(--gray);
+    margin: 0 0 7px 0; /* Space below heading */
     padding-bottom: 5px;
-    border-bottom: 1px solid var(--border-color); /* Separator below heading */
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    font-weight: 400;
 }
 
 .item-list {
     list-style: none; /* Remove default list bullets */
-    padding: 0;
+    background-color: var(--bg-color-light);
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-top: 7px;
     margin: 0;
     flex: 1; /* Allow the list to grow and take available space */
+    overflow-x: hidden;
     overflow-y: auto; /* Enable vertical scrolling */
-    /* Style the scrollbar (optional, customize appearance) */
-    scrollbar-width: thin;
-    scrollbar-color: var(--bg-color-light) var(--bg-color-medium);
 }
 
-.item-list::-webkit-scrollbar {
-    width: 8px;
+.item-list:hover {
+    filter: brightness(115%);
 }
-
-.item-list::-webkit-scrollbar-track {
-    background: var(--bg-color-medium);
+.item-list:active {
+    filter: brightness(95%);
 }
-
-.item-list::-webkit-scrollbar-thumb {
-    background-color: var(--bg-color-light);
-    border-radius: 4px;
-    border: 2px solid var(--bg-color-medium); /* Creates space around the thumb */
-}
-
 
 .item-list li {
-    color: var(--text-color-light);
+    color: var(--gray);
     padding: 8px 10px;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 3px; /* Subtle rounded corners for items */
-    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: default;
+    
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
 }
 
-.item-list li:hover {
-    background-color: var(--bg-color-light);
-    color: var(--text-color-light);
-}
-
-.item-list li.selected {
-    background-color: var(--bg-color-light); /* Selected background */
-    color: var(--text-color-selected); /* Selected text color */
-    font-weight: bold; /* Make selected item bold */
+.item-list li.selected-alt-buy {
+    color: var(--dark-yellow);
 }
 
 
-/* Bottom Button Bar Styling */
+/* Bottom Button Bar Styling ---------------------------------------------------------------------- */
 .button-bar {
-    padding: 15px 20px;
+    padding: 26px 26px 17px;
     background-color: var(--bg-color-dark); /* Match window background */
     display: flex;
-    justify-content: center; /* Center buttons horizontally */
+    justify-content: flex-start; /* Center buttons horizontally */
     gap: 20px; /* Space between buttons */
 }
 
 .button-bar button {
-    padding: 10px 20px;
-    font-size: 14px;
-    border-radius: 5px;
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-color-medium);
-    color: var(--text-color-light);
+    height: 30px;
+    width: 112px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--bg-color-light);
+    color: var(--gray);
     cursor: pointer;
     outline: none;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+
+    font: inherit;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+
+    transition: 0.1s ease;
 }
 
 .button-bar button:hover {
-    background-color: var(--bg-color-light);
-    border-color: var(--text-color-selected);
+    filter: brightness(115%)
 }
 
 .button-bar button:active {
-    background-color: var(--bg-color-light);
-    /* Add a subtle press effect */
-    transform: translateY(1px);
+    filter: brightness(95%)
 }
