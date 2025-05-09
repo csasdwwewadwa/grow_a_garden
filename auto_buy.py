@@ -84,7 +84,8 @@ def wait_for_roblox():
     detailed_report('waiting for roblox to open..')
     while True:
         hwnd = getWindowsWithTitle("Roblox")
-        if hwnd and hwnd[0].isActive:
+        if hwnd:
+            hwnd
             break
         time.sleep(1)
 
