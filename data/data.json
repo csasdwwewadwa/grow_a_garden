@@ -1,0 +1,134 @@
+{
+    "userdata" : {
+        "buying" : {
+            "seeds" : {
+                "selected_alt_buy" : [
+                    "mushroom"
+                ],
+                "selected" : [
+                    "mushroom",
+                    "pepper",
+                    "grape",
+                    "dragon_fruit"
+                ]
+            },
+            "gears" : {
+                "selected_alt_buy" : [
+                    "master_sprinkler",
+                    "lightning_rod"
+                ],
+                "selected" : [
+                    "master_sprinkler",
+                    "lightning_rod",
+                    "godly_sprinkler",
+                    "advanced_sprinkler"
+                ]
+            },
+            "eggs" : {
+                "selected_alt_buy" : [
+                    "bug_egg"
+                ],
+                "selected" : [
+                    "bug_egg",
+                    "legendary_egg"
+                ]
+            }
+        },
+        "alts" : {
+            "altsdata" : [
+                {
+                    "username" : "csasdwwewadwa_ALT2",
+                    "password" : "adasdadddad",
+                    "balance" : 0
+                },
+                {
+                    "username" : "csasdwwewadwa_ALT3",
+                    "password" : "adasdadddad",
+                    "balance" : 0
+                },
+                {
+                    "username" : "bexrkfqzhxsitsp",
+                    "password" : "kookltshatyjcarjwtevouokloztum",
+                    "balance" : 0
+                },
+                {
+                    "username" : "vqrfweyzxquhfpf",
+                    "password" : "dbrtgztrcrgxoedupctsvifybnzwir",
+                    "balance" : 0
+                },
+                {
+                    "username" : "zuyjtkgujpekaew",
+                    "password" : "uhwssmhuetmudogqqvwyfdtduwcxof",
+                    "balance" : 0
+                },
+                {
+                    "username" : "ertthwejgsdlomw",
+                    "password" : "niapyyawruqfaqvqmblgfakrumvpeb",
+                    "balance" : 0
+                },
+                {
+                    "username" : "ztxgnbgcqgtlger",
+                    "password" : "rtwgercvyycydxskyliapbuqgndhqk",
+                    "balance" : 0
+                },
+                {
+                    "username" : "ysplzskebndefio",
+                    "password" : "uhqptozsxflqxbsholgjathjbgcjae",
+                    "balance" : 0
+                },
+                {
+                    "username" : "pkowyarxpdmucho",
+                    "password" : "kcpjqsjeyligayvdghcodbywzfvqeh",
+                    "balance" : 0
+                }
+            ]
+        },
+        "config" : {
+            "private_server_link" : "https://www.roblox.com/share?code=8a1ef12f57826f4abdab8cf7b652d0fc&type=Server",
+
+            "discord_webhook_url" : "https://discord.com/api/webhooks/1369105978460606518/CFod8Iw2JDKwnFMkWVKHoC6I3KiCHrQqrKzZtuK2KoTOf-lFz6HK9tfDYd45jell7gRy",
+            "discord_userid" : "727017345356398592",
+            "detailed_report" : true
+        }
+    },
+    "gamedata" : {
+        "buying" : {
+            "seeds" : [
+                "carrot",
+                "strawberry",
+                "blueberry",
+                "orange_tulip",
+                "tomato",
+                "corn",
+                "daffodil",
+                "watermelon",
+                "pumpkin",
+                "apple",
+                "bamboo",
+                "coconut",
+                "cactus",
+                "dragon_fruit",
+                "mango",
+                "grape",
+                "mushroom",
+                "pepper"
+            ],
+            "gears" : [
+                "watering_can",
+                "trowel",
+                "basic_sprinkler",
+                "advanced_sprinkler",
+                "godly_sprinkler",
+                "lightning_rod",
+                "master_sprinkler"
+            ],
+            "eggs" : [
+                "common_egg",
+                "uncommon_egg",
+                "rare_egg",
+                "legendary_egg",
+                "bug_egg"
+            ]
+        }
+    }
+}

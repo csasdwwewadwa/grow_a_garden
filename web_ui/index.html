@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>csamacro</title>
     <link rel="stylesheet" href="assets/fonts/Inter-4.1/web/inter.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="app-container">
         <!-- Custom Top Bar (Eel will handle window drag if configured) -->
-        <div class="top-bar">
+        <div class="title-bar">
             <div class="window-controls">
-                <button class="control-button minimize">
-                    <img src="assets/top-bar/Minimize button.svg" alt="[-]">
+                <button class="control-button control-button-minimize">
+                    <img src="assets/title-bar/Minimize button.svg" alt="[-]">
                 </button>
-                <button class="control-button close">
-                    <img src="assets/top-bar/Exit button.svg" alt="[x]">
+                <button class="control-button control-button-close">
+                    <img src="assets/title-bar/Exit button.svg" alt="[x]">
                 </button>
             </div>
         </div>
@@ -35,49 +35,52 @@
         <div class="content-area">
             <div class="tab-content active-tab-content" id="tab-content-buying">
                 <div class="list-sections-container">
-                    <!-- Plants Section -->
-                    <div class="list-section">
-                        <h3>Plants to buy</h3>
-                        <ul class="item-list custom-scroll">
-                            <li class="selected-alt-buy">Mushroom</li>
+                    <!-- Seeds Section -->
+                    <div class="list-section" id="listSectionBuyingSeeds">
+                        <h3>Seeds to buy</h3>
+                        <ul class="item-list custom-scroll" id="itemListBuyingSeeds">
+                            <!-- <li class="selected-alt-buy">Mushroom</li>
                             <li>Pepper</li>
                             <li>Grape</li>
                             <li>Dragon Fruit</li>
-                            <!-- Add more items to make it scrollable -->
                             <li>Another 1</li>
                             <li>Another 2</li>
                             <li>Another 3</li>
                             <li>Another 4</li>
                             <li>Another 5</li>
                             <li>Another 6</li>
+                            <li>Another 7</li>
+                            <li>Another 8</li>
+                            <li>Another 9</li>
+                            <li>Another 10</li>
+                            <li>Another 11</li>
+                            <li>Another 12</li> -->
                         </ul>
                     </div>
 
                     <!-- Gears Section -->
-                    <div class="list-section">
+                    <div class="list-section" id="listSectionBuyingGears">
                         <h3>Gears to buy</h3>
-                        <ul class="item-list custom-scroll">
-                            <li class="selected-alt-buy">Master Sp.</li>
+                        <ul class="item-list custom-scroll" id="itemListBuyingGears">
+                            <!-- <li class="selected-alt-buy">Master Sp.</li>
                             <li class="selected-alt-buy">Lightning Rod</li>
                             <li>Godly Sp.</li>
                             <li>Advanced Sp.</li>
-                            <!-- Add more items to make it scrollable -->
                             <li>Another 1</li>
                             <li>Another 2</li>
                             <li>Another 3</li>
                             <li>Another 4</li>
                             <li>Another 5</li>
-                            <li>Another 6</li>
+                            <li>Another 6</li> -->
                         </ul>
                     </div>
 
                     <!-- Eggs Section -->
-                    <div class="list-section">
+                    <div class="list-section" id="listSectionBuyingEggs">
                         <h3>Eggs to buy</h3>
-                        <ul class="item-list">
-                            <li class="selected-alt-buy">Bug Egg</li>
-                            <li>Legendary Egg</li>
-                            <!-- Add more items if needed -->
+                        <ul class="item-list" id="itemListBuyingEggs">
+                            <!-- <li class="selected-alt-buy">Bug Egg</li>
+                            <li>Legendary Egg</li> -->
                         </ul>
                     </div>
                 </div>
@@ -92,6 +95,8 @@
     </div>
 
     <!-- JavaScript for interactivity (will need Eel integration) -->
-    <script src="tab-buttons.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="js/initiallize.js"></script>
+    <script src="js/tab-buttons.js"></script>
 </body>
 </html>
