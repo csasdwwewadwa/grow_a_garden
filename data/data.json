@@ -82,6 +82,13 @@
                     "balance" : 0
                 }
             ]
+        },
+        "config" : {
+            "private_server_link" : "https://www.roblox.com/share?code=8a1ef12f57826f4abdab8cf7b652d0fc&type=Server",
+
+            "discord_webhook_url" : "https://discord.com/api/webhooks/1369105978460606518/CFod8Iw2JDKwnFMkWVKHoC6I3KiCHrQqrKzZtuK2KoTOf-lFz6HK9tfDYd45jell7gRy",
+            "discord_userid" : "727017345356398592",
+            "detailed_report" : true
         }
     },
     "gamedata" : {
