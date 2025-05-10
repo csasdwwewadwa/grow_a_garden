@@ -61,7 +61,7 @@ def report_rare_stuf(msg):
 # -------------------------------
 # general windows stuffs
 
-PRIVATE_SERVER_LINK = r'https://www.roblox.com/share?code=22cba0e039f01f4cb24eabdc5fab7113&type=Server'
+PRIVATE_SERVER_LINK = r'https://www.roblox.com/share?code=8a1ef12f57826f4abdab8cf7b652d0fc&type=Server'
 
 def getWindowsWithTitle(title):
     windows = []
@@ -148,6 +148,7 @@ def rotate_camera(x, y):
     csamacro.mouse_move_relative(0, -5)
     csamacro.mouse_button_down('right')
     csamacro.mouse_button_up('right')
+    csamacro.mouse_move_relative(0, 5)
     csamacro.mouse_move_relative(0, 5)
     csamacro.mouse_button_down('right')
     csamacro.mouse_move_relative(round(x/CAMERA_SENSITIVITY*2), round(-y/CAMERA_SENSITIVITY*2), debounce=0.1)
